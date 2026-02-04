@@ -12,32 +12,30 @@ def get_steps():
     return steps
 
 def get_stride_inches():
-    stride = int(input())
-    return stride
+    stride_inches = int(input())
+    return stride_inches
 
-def calculate_miles(steps, stride):
-    feet = float(steps * stride / 12)
-    miles = float(f"{feet / 5280:.2f}")
+def calculate_miles(steps, stride_inches):
+    feet = (steps * stride_inches) / 12
+    miles = feet / 5280
     return miles
 
 def additional_steps_needed(steps):
-    if steps > 10000:
-        additional = steps - 10000
-    else:
-        additional = 10000 - steps
+    additional = steps
     return additional
 
 def miles_output_line(steps, miles):
-    msg = f"You walked {steps} steps which is {miles} miles"
+    msg = f"You walked {steps:,} steps which is {miles:.2f} miles"
     return msg
 
 def steps_output_line(additional):
-    if additional > 10000:
-        msg = f"You were {additional} steps over 10,000"
-    if additional < 10000:
-         msg = f"You need {additional} more steps to reach 10,000"
+    if additional > 0:
+        msg = f"You need {additional:,} more steps to reach 10,000"
+    elif additional < 0:
+        msg = f"You were {abs(additional):,} steps over 10,000"
     else:
-       msg = "you walked exactly 10,000 steps"
+        msg = "You walked exactly 10,000 steps"
+    
     return msg
 
 # +-----do not modify this section-----+
