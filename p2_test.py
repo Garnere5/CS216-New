@@ -107,5 +107,71 @@ else:
     print("  actual:  ", actual)
 
 print()
+
+# -------------------------------------------------
+# Test 7: steps_output_line (over)
+# -------------------------------------------------
+print("Test 7: steps_output_line(500)")
+expected = "You were 500 steps over 10,000"
+actual = p2.steps_output_line(-500)
+
+if actual == expected:
+    print("PASS: Test 7")
+else:
+    print("FAIL: Test 7")
+    print("  expected:", expected)
+    print("  actual:  ", actual)
+
+print()
+
+# -------------------------------------------------
+# Test 8: steps_output_line (over)
+# -------------------------------------------------
+print("Test 8: steps_output_line(1000)")
+expected = "You need 1,000 more steps to reach 10,000"
+actual = p2.steps_output_line(1000)
+
+if actual == expected:
+    print("PASS: Test 8")
+else:
+    print("FAIL: Test 8")
+    print("  expected:", expected)
+    print("  actual:  ", actual)
+
+print()
+
+# -------------------------------------------------
+# Test 9: steps_output_line (over)
+# -------------------------------------------------
+print("Test 9: steps_output_line(10000)")
+expected = "You need 10,000 more steps to reach 10,000"
+actual = p2.steps_output_line(10000)
+
+if actual == expected:
+    print("PASS: Test 9")
+else:
+    print("FAIL: Test 9")
+    print("  expected:", expected)
+    print("  actual:  ", actual)
+
+print()
+
+# -------------------------------------------------
+# Test 10: steps_output_line (over)
+# -------------------------------------------------
+print("Test 10: steps_output_line(1500)")
+expected = "You need 1,500 more steps to reach 10,000"
+actual = p2.steps_output_line(1500)
+
+if actual == expected:
+    print("PASS: Test 10")
+else:
+    print("FAIL: Test 10")
+    print("  expected:", expected)
+    print("  actual:  ", actual)
+
+print()
+
+print()
 print("=== End of Instructor Tests ===")
 print()
